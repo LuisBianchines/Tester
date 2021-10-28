@@ -15,7 +15,7 @@ Funcionalidade: Login
     Cenario: Senha errada
 
         Dado que eu acesso a página principal
-        Quando eu faço login com "eu@eu.io" e "1234dsf5"
+        Quando eu faço login com "eu@eu.io" e "12sf5"
         Então devo ver a seguinte mensagem "Senha inválida"  
 
     Cenario: Usuário não existe
