@@ -5,12 +5,13 @@ Funcionalidade: Login
     Sendo um Usuario
     Posso acessar o sistema com meu email e senha previamente cadastrados.
 
+    @temp
     Cenario: Usuario deve ser autorizado
 
         Dado que eu acesso a página principal
-        Quando eu faço login com "eu@eu.io" e "12345"
+        Quando eu faço login com "josefaasantos410@gmail.com" e "josefa123"
         Então devo ser autenticado com sucesso
-        E devo ver a seguinte mensagem "Olá, Fernando"
+        E devo ver a seguinte mensagem "Olá, Josefa"
 
     Cenario: Senha errada
 
