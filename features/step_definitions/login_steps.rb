@@ -10,7 +10,9 @@
     find('#password').set senha
     click_button 'faça seu login'
 
-    sleep 10
+    Capybara.default_max_wait_time = 10
+    
+    
   end                                                                           
                                                                                 
   Então('devo ser autenticado com sucesso') do                                  
