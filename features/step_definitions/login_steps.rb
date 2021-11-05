@@ -1,17 +1,22 @@
 
 
   Dado('que eu acesso a página principal') do                                   
-    pending # Write code here that turns the phrase above into concrete actions 
+    visit 'https://m2-stage.drogasil.com.br/customer/account/login' 
   end                                                                           
                                                                                 
-  Quando('eu faço login com {string} e {string}') do |email, senha|          
-    pending # Write code here that turns the phrase above into concrete actions 
+  Quando('eu faço login com {string} e {string}') do |email, senha|  
+    @email = email        
+    find('input[name=emailCpf]').set email 
+    find('#password').set senha
+    click_button 'faça seu login'
+
+    sleep 10
   end                                                                           
                                                                                 
   Então('devo ser autenticado com sucesso') do                                  
-    pending # Write code here that turns the phrase above into concrete actions 
+    expect(page).to have_content @email
   end                                                                           
                                                                                 
   Então('devo ver a seguinte mensagem {string}') do |mensagem|                    
-    pending # Write code here that turns the phrase above into concrete actions 
+    expect(page).to have_content mensagem
   end                                                                           
